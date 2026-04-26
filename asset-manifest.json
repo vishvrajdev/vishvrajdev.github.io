@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.68d3cc3a.css",
-    "main.js": "/static/js/main.2ab448db.js",
+    "main.css": "/static/css/main.74fa2f54.css",
+    "main.js": "/static/js/main.8be1e979.js",
     "static/media/trackbot_robot_iso.png": "/static/media/trackbot_robot_iso.3ffa1ee7a998dc91cd9b.png",
     "static/media/trackbot_topview_blueprint.png": "/static/media/trackbot_topview_blueprint.8a2f80708e61cbcafa58.png",
     "static/media/trackbot_exploded.png": "/static/media/trackbot_exploded.57121447409538ebba02.png",
@@ -15,15 +15,13 @@
     "static/media/Vishvrajsinh_Solanki_Resume.pdf": "/static/media/Vishvrajsinh_Solanki_Resume.1174aa331c88946fc5d3.pdf",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/manOnTable.svg": "/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
-    "static/media/contactMailDark.svg": "/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
     "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
-    "static/media/resume.pdf": "/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/index.html",
-    "main.68d3cc3a.css.map": "/static/css/main.68d3cc3a.css.map",
-    "main.2ab448db.js.map": "/static/js/main.2ab448db.js.map"
+    "main.74fa2f54.css.map": "/static/css/main.74fa2f54.css.map",
+    "main.8be1e979.js.map": "/static/js/main.8be1e979.js.map"
   },
   "entrypoints": [
-    "static/css/main.68d3cc3a.css",
-    "static/js/main.2ab448db.js"
+    "static/css/main.74fa2f54.css",
+    "static/js/main.8be1e979.js"
   ]
 }
