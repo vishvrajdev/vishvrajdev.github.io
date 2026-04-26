@@ -1,0 +1,13 @@
+.radar-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+svg {
+  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.3));
+}

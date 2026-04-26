@@ -12,7 +12,7 @@ export default function AchievementCard({cardInfo, isDark}) {
   }
 
   return (
-    <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
+    <div className={isDark ? "dark-mode certificate-card hover-tilt card-glow" : "certificate-card hover-tilt card-glow"}>
       <div className="certificate-image-div">
         <img
           src={cardInfo.image}
@@ -25,6 +25,10 @@ export default function AchievementCard({cardInfo, isDark}) {
           {cardInfo.title}
         </h5>
         <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
+          {cardInfo.institution && (
+            <span style={{display: "block", marginBottom: "4px", fontWeight: 700}}>{cardInfo.institution}</span>
+          )}
+          {cardInfo.subtitle}
           {cardInfo.description}
         </p>
         {/* Learning Bullets */}

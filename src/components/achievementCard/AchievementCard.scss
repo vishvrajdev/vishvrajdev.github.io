@@ -1,9 +1,9 @@
 @import "../../_globalColor";
 
 .card-image {
-  max-width: 100%;
-  height: auto;
   width: 120px;
+  height: 80px;
+  object-fit: contain;
 }
 .card-title {
   color: $titleColor;

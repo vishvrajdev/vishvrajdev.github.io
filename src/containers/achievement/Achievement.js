@@ -4,6 +4,9 @@ import AchievementCard from "../../components/achievementCard/AchievementCard";
 import {achievementSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import DisplayLottie from "../../components/displayLottie/DisplayLottie";
+import cert from "../../assets/lottie/ml.json";
+
 export default function Achievement() {
   const {isDark} = useContext(StyleContext);
   if (!achievementSection.display) {
@@ -14,11 +17,14 @@ export default function Achievement() {
       <div className="main" id="achievements">
         <div className="achievement-main-div">
           <div className="achievement-header">
+            <div className="achievement-lottie-wrapper">
+              <DisplayLottie animationData={cert} />
+            </div>
             <h1
               className={
                 isDark
-                  ? "dark-mode heading achievement-heading"
-                  : "heading achievement-heading"
+                  ? "dark-mode achievement-heading"
+                  : "achievement-heading"
               }
             >
               {achievementSection.title}
@@ -26,8 +32,8 @@ export default function Achievement() {
             <p
               className={
                 isDark
-                  ? "dark-mode subTitle achievement-subtitle"
-                  : "subTitle achievement-subtitle"
+                  ? "dark-mode achievement-subtitle"
+                  : "achievement-subtitle"
               }
             >
               {achievementSection.subtitle}

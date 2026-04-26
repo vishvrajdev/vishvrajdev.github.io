@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "https://vishvrajdev.github.io",
   "name": "developerfolio",
   "version": "0.1.0",
   "private": true,
@@ -22,11 +22,11 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "node fetch.js && react-scripts start",
-    "build": "node fetch.js && react-scripts build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "node fetch.js && node node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "node fetch.js && node node_modules/react-scripts/bin/react-scripts.js build",
+    "deploy": "node node_modules/gh-pages/bin/gh-pages.js -d build",
+    "test": "node node_modules/react-scripts/bin/react-scripts.js test",
+    "eject": "node node_modules/react-scripts/bin/react-scripts.js eject",
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
     "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
   },

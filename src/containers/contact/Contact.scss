@@ -1,20 +1,61 @@
 @import "../../_globalColor";
 
+.contact-section-container {
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0 100px 0;
+}
+
 .contact-div-main {
   display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
 }
 
-.dark-mode a {
-  color: $textColorDark;
-}
-
-.contact-div-main > * {
-  flex: 1;
+.contact-header {
+  flex: 0 0 55%; 
 }
 
 .contact-title {
-  font-size: 56px;
-  font-weight: 400;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 24px !important;
+  text-align: left !important;
+}
+
+.contact-subtitle {
+  text-transform: none !important; /* Sentence case */
+  font-size: 1.1rem !important;
+  letter-spacing: normal !important;
+  line-height: 1.6;
+  margin-bottom: 30px !important;
+  color: $subTitle;
+}
+
+.contact-text-div {
+  margin-top: 2rem;
+}
+
+.contact-social-media {
+  margin-top: 24px;
+}
+
+.contact-image-div {
+  flex: 0 0 45%; 
+  max-width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure Lottie fills container */
+.contact-image-div > div {
+  width: 350px !important;
+  height: 350px !important;
 }
 
 /* Availability Badge */
@@ -74,25 +115,6 @@
   overflow: hidden;
 }
 
-/* Ripple hover effect */
-.contact-detail-btn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(85, 25, 139, 0.1);
-  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
-  transform: translate(-50%, -50%);
-}
-
-.contact-detail-btn:hover::after {
-  width: 300px;
-  height: 300px;
-}
-
 .contact-detail-btn:hover {
   background: $buttonColor;
   color: #fff;
@@ -105,74 +127,56 @@
   border-color: #a855f7;
 }
 
-.dark-mode.contact-detail-btn::after {
-  background: rgba(168, 85, 247, 0.1);
-}
-
 .dark-mode.contact-detail-btn:hover {
   background: #a855f7;
   color: #fff;
   box-shadow: 0 6px 20px rgba(168, 85, 247, 0.3);
 }
 
-.contact-detail-btn i {
-  font-size: 14px;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-subtitle {
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  line-height: 1.6;
-}
-
-.contact-text-div {
-  margin-top: 1.5rem;
-}
-
 .contact-margin-top {
   margin-top: 4rem;
 }
 
-.contact-image-div > img {
-  max-width: 100%;
-  height: auto;
-  margin-left: 1.5rem;
-  margin-top: -4rem;
-}
-
 /* Media Query */
-@media (max-width: 1380px), (max-width: 768px) {
-  .contact-title {
-    font-size: 40px;
+@media (max-width: 992px) {
+  .contact-div-main {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
+  .contact-header, .contact-image-div {
+    flex: 0 0 100%;
+  }
+  .contact-image-div {
+    margin-top: 40px;
+  }
+  .contact-title {
+    text-align: center !important;
+    font-size: 2.2rem !important;
+  }
+}
 
+@media (max-width: 768px) {
+  .contact-image-div, .contact-image-div > div {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  .contact-section-container {
+    width: 95%;
+  }
   .contact-subtitle {
-    font-size: 14px;
+    font-size: 16px;
     line-height: normal;
     text-align: center;
   }
-
   .contact-text-div {
     text-align: center;
     margin-top: 1.5rem;
   }
-
   .contact-detail-btn {
     font-size: 14px;
     padding: 8px 16px;
     justify-content: center;
-  }
-
-  .contact-image-div {
-    display: none;
-  }
-
-  .availability-badge {
-    margin: 0 auto 12px;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
+import AboutMe from "./AboutMe/AboutMe";
 import Skills from "./skills/Skills";
 import WorkExperience from "./workExperience/WorkExperience";
 import StartupProject from "./StartupProjects/StartupProject";
@@ -8,12 +9,16 @@ import Achievement from "./achievement/Achievement";
 import Contact from "./contact/Contact";
 import Footer from "../components/footer/Footer";
 import Education from "./education/Education";
-import ScrollToTopButton from "./topbutton/Top";
+import Top from "./topbutton/Top";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
+
+import ScrollProgress from "../components/ScrollProgress/ScrollProgress";
+
+import HireMeFAB from "../components/HireMeFAB/HireMeFAB";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -44,8 +49,10 @@ const Main = () => {
           <SplashScreen />
         ) : (
           <>
+            <ScrollProgress />
             <Header />
             <Greeting />
+            <AboutMe />
             <Skills />
             <Education />
             <WorkExperience />
@@ -53,7 +60,8 @@ const Main = () => {
             <Achievement />
             <Contact />
             <Footer />
-            <ScrollToTopButton />
+            <Top />
+            <HireMeFAB isDark={isDark} />
           </>
         )}
       </StyleProvider>

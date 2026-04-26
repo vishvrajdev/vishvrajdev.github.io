@@ -1,0 +1,96 @@
+@import "../../_globalColor";
+
+.about-main {
+  width: 85%; /* Reduced from 90% for consistency */
+  padding: 40px 10px 60px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: space-between;
+  gap: 40px; /* Reduced gap */
+  max-width: 1000px; /* Reduced from 1200px */
+  margin: 0 auto;
+}
+
+.about-text-div {
+  flex: 0 0 55%; /* 55% width */
+  padding: 20px;
+  border-left: 4px solid $buttonColor;
+  background: rgba(85, 25, 139, 0.02);
+}
+
+.dark-mode.about-text-div {
+  border-left-color: #a855f7;
+  background: rgba(168, 85, 247, 0.03);
+}
+
+.about-heading {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+  margin-bottom: 20px !important;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: $textColor;
+  margin: 0;
+}
+
+.dark-mode.about-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.about-image-div {
+  flex: 0 0 45%; /* 45% width */
+  max-width: 450px;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure the Lottie itself fills the container */
+.about-image-div > div {
+  width: 450px !important;
+  height: 450px !important;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text-div {
+    flex: 0 0 100%;
+    border-left: none;
+    border-top: 4px solid $buttonColor;
+  }
+  .about-image-div {
+    flex: 0 0 100%;
+    margin-top: 20px;
+  }
+  .about-image-div, .about-image-div > div {
+    width: 300px !important;
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+  .about-main {
+    width: 95%;
+  }
+  .about-heading {
+    text-align: center !important;
+    font-size: 2.2rem !important;
+  }
+}

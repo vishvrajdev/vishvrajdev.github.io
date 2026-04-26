@@ -24,9 +24,19 @@ body {
 }
 body {
   margin: 0;
-  font: 19px / 23px Inter, Montserrat, "Montserrat", sans-serif;
+  overflow-x: hidden;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+p, span, li, div, a, button {
+  font-family: 'Satoshi', sans-serif;
 }
 
 /* ===== Global Animation Keyframes ===== */
@@ -64,6 +74,118 @@ body {
 
 @keyframes dash-flow {
   to { stroke-dashoffset: -20; }
+}
+
+/* ===== 3D and Glow Effects ===== */
+.hover-tilt {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.hover-tilt:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+
+.card-glow {
+  position: relative;
+}
+
+.card-glow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(108, 99, 255, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.card-glow:hover::after {
+  opacity: 1;
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .glass-morphism {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Global Typography Standardization ===== */
+.heading,
+.skills-heading,
+.education-heading,
+.experience-heading,
+.achievement-heading,
+.contact-title,
+.about-heading {
+  font-family: 'Cabinet Grotesk', sans-serif !important;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  margin-bottom: 40px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .heading,
+  .skills-heading,
+  .education-heading,
+  .experience-heading,
+  .achievement-heading,
+  .contact-title,
+  .about-heading {
+    font-size: 2.2rem !important;
+  }
+}
+
+/* ===== Scroll Progress Bar ===== */
+.progress-container {
+  height: 4px !important;
+}
+
+.progress-bar {
+  height: 4px !important;
+  box-shadow: 0 0 8px #55198b;
+}
+
+/* ===== Back to Top Button ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #55198b, #7c3aed);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(85, 25, 139, 0.3);
+  border: none;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(85, 25, 139, 0.4);
 }
 
 /* ===== Selection Color ===== */

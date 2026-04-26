@@ -78,11 +78,29 @@ input:checked + .slider::after {
   bottom: 14.5%;
 }
 
-.emoji {
+.toggle-icon {
   z-index: 10;
   display: flex;
   align-items: center;
-  margin-left: 2px;
+  justify-content: center;
+  width: 28px;
+  height: 26px;
+  transition: 0.4s;
+  color: #fbbf24; /* Sun color */
+  font-size: 14px;
+}
+
+input:checked + .slider .toggle-icon {
+  transform: translateX(22px);
+  color: #f1f5f9; /* Moon color */
+}
+
+.sun-icon {
+  color: #fbbf24;
+}
+
+.moon-icon {
+  color: #f1f5f9;
 }
 
 @media all and (max-width: 786px) and (min-width: 425px) {

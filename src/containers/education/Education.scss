@@ -1,50 +1,80 @@
-.education-heading {
-  font-size: 56px;
-  font-weight: 400;
-}
+@import "../../_globalColor";
 
 .education-section {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding: 20px 0px;
+  width: 85%; /* Reduced from 90% for consistency */
+  padding: 40px 0px 60px 0px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: 80px;
 }
 
-.education-section > * {
-  flex: 1;
-  margin-bottom: 30px;
+.education-main-content {
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: space-between;
+  gap: 40px; /* Reduced gap */
+  width: 100%;
+  max-width: 1000px; /* Reduced from 1200px */
+  margin: 0 auto;
 }
 
-.education-card-container {
+.education-lottie-div {
+  flex: 0 0 45%; 
+  max-width: 450px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure Lottie fills container */
+.education-lottie-div > div {
+  width: 450px !important;
+  height: 450px !important;
+}
+
+.education-text-div {
+  flex: 0 0 55%; 
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
 }
 
-@media (max-width: 1380px) {
-  .education-card-container {
-    padding-top: 0px;
+.education-heading {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+  margin-bottom: 30px !important;
+}
+
+.education-cards-div {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack cards in the text column */
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .education-main-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .education-lottie-div, .education-text-div {
+    flex: 0 0 100%;
   }
   .education-heading {
-    font-size: 40px;
-  }
-  .education-text-subtitle {
-    font-size: 18px;
-    text-align: center;
+    text-align: center !important;
+    font-size: 2.2rem !important;
   }
 }
 
 @media (max-width: 768px) {
-  .education-card-container {
-    padding-top: 0px;
+  .education-lottie-div, .education-lottie-div > div {
+    width: 300px !important;
+    height: 300px !important;
   }
-  .education-heading {
-    font-size: 30px;
-    text-align: center;
-  }
-  .education-text-subtitle {
-    font-size: 16px;
+  .education-section {
+    width: 95%;
   }
 }

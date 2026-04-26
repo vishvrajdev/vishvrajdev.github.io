@@ -92,11 +92,6 @@ function Header() {
               <a href="#talks" onClick={closeMenu}>Talks</a>
             </li>
           )}
-          {viewResume && (
-            <li>
-              <a href="#resume" onClick={closeMenu}>Resume</a>
-            </li>
-          )}
           <li>
             <a href="#contact" onClick={closeMenu}>Contact</a>
           </li>

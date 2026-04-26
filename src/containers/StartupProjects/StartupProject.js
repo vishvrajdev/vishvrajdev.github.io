@@ -4,6 +4,8 @@ import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 import TrackBotFlow from "../../components/TrackBotFlow/TrackBotFlow";
+import DisplayLottie from "../../components/displayLottie/DisplayLottie";
+import rocket from "../../assets/lottie/build.json";
 
 function ProjectImageGallery({images, isDark}) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -82,14 +84,16 @@ export default function StartupProject() {
     <div className="main" id="projects">
       <div>
         <Fade bottom duration={1000} distance="20px">
-          <h1 className="skills-heading">
-            <i className="fas fa-code section-heading-icon"></i> {bigProjects.title}
-          </h1>
+          <div className="section-header-no-lottie">
+            <h1 className="projects-heading">
+              {bigProjects.title}
+            </h1>
+          </div>
           <p
             className={
               isDark
                 ? "dark-mode project-subtitle"
-                : "subTitle project-subtitle"
+                : "project-subtitle"
             }
           >
             {bigProjects.subtitle}
@@ -98,13 +102,46 @@ export default function StartupProject() {
 
         <div className="projects-container">
           {bigProjects.projects.map((project, i) => {
+            if (project.isCTA) {
+              return (
+                <Fade bottom duration={1000} distance="20px" delay={i * 200} key={i}>
+                  <div
+                    className={
+                      isDark
+                        ? "dark-mode project-card project-card-dark hover-tilt card-glow project-cta-card"
+                        : "project-card project-card-light hover-tilt card-glow project-cta-card"
+                    }
+                  >
+                    <div className="cta-card-content">
+                      <div className="cta-icon">
+                        <i className="fab fa-github"></i>
+                      </div>
+                      <h5 className={isDark ? "dark-mode cta-heading" : "cta-heading"}>
+                        View All Projects on GitHub
+                      </h5>
+                      <p className={isDark ? "dark-mode cta-subtext" : "cta-subtext"}>
+                        Complete source code, Jupyter notebooks, and project documentation
+                      </p>
+                      <div className="cta-button-container">
+                        <button 
+                          className="cta-button-purple"
+                          onClick={() => openUrlInNewTab(project.footerLink[0].url)}
+                        >
+                          View GitHub Profile &rarr;
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </Fade>
+              );
+            }
             return (
               <Fade bottom duration={1000} distance="20px" delay={i * 200} key={i}>
                 <div
                   className={
                     isDark
-                      ? `dark-mode project-card project-card-dark ${project.featured ? "project-featured" : ""}`
-                      : `project-card project-card-light ${project.featured ? "project-featured" : ""}`
+                      ? `dark-mode project-card project-card-dark hover-tilt card-glow ${project.featured ? "project-featured" : ""} ${project.fullWidth ? "project-full-width" : ""}`
+                      : `project-card project-card-light hover-tilt card-glow ${project.featured ? "project-featured" : ""} ${project.fullWidth ? "project-full-width" : ""}`
                   }
                 >
                   {/* Featured Badge */}
@@ -188,6 +225,20 @@ export default function StartupProject() {
                     </div>
                   )}
 
+                  {/* Impact Metrics */}
+                  {project.impact && (
+                    <div className="project-section impact-section">
+                      <h6 className="section-label impact-label">
+                        <i className="fas fa-bullseye"></i> Key Impact
+                      </h6>
+                      <div className="impact-badge-container">
+                        <span className="impact-badge">
+                          {project.impact}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Tech Stack Badges */}
                   {project.techStack && (
                     <div className="tech-stack-section">
@@ -220,7 +271,7 @@ export default function StartupProject() {
                             }
                             onClick={() => openUrlInNewTab(link.url)}
                           >
-                            <i className="fab fa-github"></i> {link.name}
+                            <i className={link.name.toLowerCase().includes("github") ? "fab fa-github" : "fas fa-external-link-alt"}></i> {link.name}
                           </span>
                         );
                       })}

@@ -1,15 +1,47 @@
 @import "../../_globalColor";
 
-.achievement-heading {
-  font-size: 56px;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0px;
-}
-.achievement-subtitle {
-  text-transform: uppercase;
-  margin: 0px;
+.achievement-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   margin-bottom: 50px;
+}
+
+.achievement-lottie-wrapper {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure Lottie fills container */
+.achievement-lottie-wrapper > div {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+@media (max-width: 768px) {
+  .achievement-lottie-wrapper, .achievement-lottie-wrapper > div {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+
+.achievement-heading {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  line-height: normal;
+  margin: 0px !important;
+}
+
+.achievement-subtitle {
+  margin: 10px 0 0 0 !important;
+  font-size: 1.1rem;
+  color: $subTitle;
+  text-transform: none !important; /* Ensure sentence case */
 }
 .subTitle {
   color: $subTitle;
