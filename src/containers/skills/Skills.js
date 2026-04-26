@@ -1,9 +1,8 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
-import codingPerson from "../../assets/lottie/codingPerson";
+import ml from "../../assets/lottie/ml.json";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -18,7 +17,7 @@ export default function Skills() {
         <Fade left duration={1000}>
           <div className="skills-image-div">
             {illustration.animated ? (
-              <DisplayLottie animationData={codingPerson} />
+              <DisplayLottie animationData={ml} />
             ) : (
               <img
                 alt="Man Working"
@@ -32,7 +31,7 @@ export default function Skills() {
             <h1
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
             >
-              {skillsSection.title}{" "}
+              {skillsSection.title}
             </h1>
             <p
               className={
@@ -43,23 +42,31 @@ export default function Skills() {
             >
               {skillsSection.subTitle}
             </p>
-            <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skills, i) => {
-                return (
-                  <p
-                    key={i}
-                    className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
-                    }
-                  >
-                    {skills}
-                  </p>
-                );
-              })}
-            </div>
+
+            {/* Core Expertise Cards */}
+            {skillsSection.skillCategories && (
+              <div className="skill-category-grid">
+                {skillsSection.skillCategories.map((cat, i) => (
+                  <Fade right duration={1000} delay={i * 150} key={i}>
+                    <div
+                      className={
+                        isDark
+                          ? "dark-mode skill-category-card"
+                          : "skill-category-card"
+                      }
+                    >
+                      <div className="skill-category-icon">
+                        <i className={cat.icon}></i>
+                      </div>
+                      <h3 className="skill-category-title">{cat.category}</h3>
+                      <p className="skill-category-description">
+                        {cat.description}
+                      </p>
+                    </div>
+                  </Fade>
+                ))}
+              </div>
+            )}
           </div>
         </Fade>
       </div>

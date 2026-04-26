@@ -43,6 +43,8 @@
   padding: 15px 20px;
   color: $textColor;
   text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 6px;
 }
 
 .header li a:hover,
@@ -73,7 +75,7 @@
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 
 /* menu icon */
@@ -178,5 +180,24 @@
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
     font-size: 12px;
+  }
+}
+
+/* Mobile menu improvements */
+@media (max-width: 767px) {
+  .header .menu {
+    background: inherit;
+    padding: 8px 0;
+  }
+  .header li a {
+    padding: 12px 20px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .dark-menu li a {
+    border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+  }
+  .header li:last-child a {
+    border-bottom: none;
   }
 }

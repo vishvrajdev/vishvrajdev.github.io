@@ -15,14 +15,11 @@
 
 .greeting-main {
   display: flex;
+  align-items: center;
 }
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -30,27 +27,212 @@
   margin-bottom: 30px;
 }
 
-.empty-div {
-  margin-bottom: 40px;
+/* ===== Internship Badge ===== */
+.internship-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 25, 139, 0.08);
+  color: $buttonColor;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(85, 25, 139, 0.18);
+  margin-bottom: 18px;
+  animation: fadeInUp 0.8s ease both;
 }
 
+.dark-mode.internship-badge {
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+.internship-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  animation: pulse-green 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+}
+
+/* ===== CTA Buttons ===== */
 .button-greeting-div {
   display: flex;
-  margin-top: 40px;
+  margin-top: 24px;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+.cta-link {
+  text-decoration: none;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.cta-button i {
+  font-size: 13px;
+}
+
+.cta-primary {
+  background: linear-gradient(135deg, $buttonColor, #7c3aed);
+  color: #fff;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(85, 25, 139, 0.4);
+}
+
+.cta-resume {
+  background: transparent;
+  color: $buttonColor;
+  border: 2px solid $buttonColor;
+}
+
+.cta-resume:hover {
+  background: $buttonColor;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(85, 25, 139, 0.3);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: $textColor;
+  border: 2px solid $lightBorder1;
+}
+
+.cta-secondary:hover {
+  border-color: $buttonColor;
+  color: $buttonColor;
+  transform: translateY(-2px);
+}
+
+/* Dark mode CTA */
+.dark-mode.cta-resume {
+  color: #c084fc;
+  border-color: #a855f7;
+}
+
+.dark-mode.cta-resume:hover {
+  background: #a855f7;
+  color: #fff;
+}
+
+.dark-mode.cta-secondary {
+  color: $textColorDark;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode.cta-secondary:hover {
+  border-color: #a855f7;
+  color: #c084fc;
+}
+
+/* ===== Resume Highlight ===== */
+.resume-highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: rgba(85, 25, 139, 0.06);
+  border: 1px solid rgba(85, 25, 139, 0.12);
+  border-radius: 10px;
+  max-width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.resume-highlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(85, 25, 139, 0.12);
+}
+
+.dark-mode.resume-highlight {
+  background: rgba(168, 85, 247, 0.08);
+  border-color: rgba(168, 85, 247, 0.2);
+}
+
+.resume-highlight-icon {
+  font-size: 22px;
+  color: $buttonColor;
+}
+
+.dark-mode .resume-highlight-icon {
+  color: #a855f7;
+}
+
+.resume-highlight-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: $titleColor;
+}
+
+.dark-mode .resume-highlight-title {
+  color: $textColorDark;
+}
+
+.resume-highlight-desc {
+  display: block;
+  font-size: 12px;
+  color: $cardSubtitle;
+  margin-top: 1px;
+}
+
+.dark-mode .resume-highlight-desc {
+  color: rgba(255, 255, 255, 0.55);
+}
+
 .download-link-button {
   text-decoration: none;
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 1.1;
   color: $textColor !important;
+  background: linear-gradient(135deg, $buttonColor, #7c3aed, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark-mode.greeting-text {
+  background: linear-gradient(135deg, #a855f7, #c084fc, #e9d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 22px;
+  line-height: 34px;
+  margin-top: 12px;
 }
 
 .greeting-image-div > img {
@@ -58,6 +240,39 @@
   height: auto;
 }
 
+/* Proof Points */
+.proof-points {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+}
+
+.proof-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $cardSubtitle;
+}
+
+.dark-mode .proof-point-item {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.proof-icon {
+  color: $buttonColor;
+  margin-top: 3px;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.dark-mode .proof-icon {
+  color: #a855f7;
+}
+
+/* Wave Emoji */
 .wave-emoji {
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
@@ -67,41 +282,36 @@
 }
 
 @keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(9deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Section Heading Icon */
+.section-heading-icon {
+  margin-right: 8px;
+  font-size: 0.75em;
+  opacity: 0.7;
 }
 
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 45px;
   }
   .greeting-text-p {
     font-size: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
   }
   .greeting-text {
     font-size: 30px;
@@ -117,6 +327,35 @@
   }
   .greeting-image-div {
     height: 256px;
+  }
+  .proof-points {
+    margin-top: 16px;
+  }
+  .proof-point-item {
+    font-size: 14px;
+  }
+  .resume-highlight {
+    margin: 16px auto 0;
+  }
+  .internship-badge {
+    font-size: 12px;
+    padding: 6px 14px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-greeting-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
 }
 

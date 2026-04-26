@@ -1,390 +1,284 @@
-/* Change this file to get your personal Portfolio */
-
-// To change portfolio colors globally go to the  _globalColor.scss file
+/* ========= PERSONAL PORTFOLIO CONFIG ========= */
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
-// Splash Screen
-
+/* Splash Screen */
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
-  animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  enabled: true,
+  animation: require("./assets/lottie/splashAnimation.json"),
+  duration: 2000
 };
 
-// Summary And Greeting Section
-
+/* Illustration */
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true
 };
 
+/* ========= GREETING ========= */
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Vishvrajsinh Solanki",
+  title: "I Build Intelligent Systems with Data",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "AI & Data Science Undergrad — turning raw data into real-world insights through ML, analytics, and decision support systems"
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
-};
-
-// Social Media Links
-
-const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
-};
-
-// Skills Section
-
-const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
-  skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+  proofPoints: [
+    "Built an autonomous warehouse AGV with real-time navigation & AI optimization",
+    "Designed a campus library Decision Support System with threshold logic & time-series analysis",
+    "Applied K-Means clustering to mine household electricity consumption patterns",
+    "Developed classification models to analyze attendance-learning quality correlations"
   ],
+  resumeLink: "https://drive.google.com/uc?export=download&id=1WfBFinKNKhiU2nKbQWyaQWXXwQ6CE4WG",
+  displayGreeting: true
+};
 
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
+/* ========= SOCIAL LINKS ========= */
+const socialMediaLinks = {
+  github: "https://github.com/vishvrajsolanki-dev",
+  linkedin: "https://www.linkedin.com/in/vishvrajsinh-solanki-1396ab37a/",
+  gmail: "vishvrajsolanki0207@gmail.com",
+  instagram: "https://www.instagram.com/vishvraj_9091",
+  twitter: "https://x.com/SolankiVis42411",
+  kaggle: "https://www.kaggle.com/vishvrajsolanki",
+  whatsapp: "https://wa.me/919328767814",
+  display: true
+};
 
-  softwareSkills: [
+/* ========= CORE EXPERTISE ========= */
+const skillsSection = {
+  title: "Core Expertise",
+  subTitle:
+    "Focused on building intelligent, data-driven systems with real-world impact",
+  skillCategories: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      category: "Machine Learning",
+      icon: "fas fa-brain",
+      description: "Classification, Clustering (K-Means), Model Evaluation & Selection"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      category: "Data Analysis",
+      icon: "fas fa-chart-bar",
+      description: "EDA, Feature Engineering, Statistical Testing & Interpretation"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      category: "Intelligent Systems",
+      icon: "fas fa-robot",
+      description: "Decision Support Systems, Robotics Integration, Real-time Automation"
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      category: "Programming",
+      icon: "fas fa-code",
+      description: "Python (Pandas, NumPy, Scikit-learn), C/C++, SQL"
     },
     {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      category: "Visualization",
+      icon: "fas fa-chart-line",
+      description: "Matplotlib, Seaborn, Dashboard Design (HTML/CSS/JS)"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      category: "Development Tools",
+      icon: "fas fa-tools",
+      description: "Git & GitHub, Jupyter Notebook, VS Code, ESP-IDF"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
-// Education Section
-
+/* ========= EDUCATION ========= */
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "AD Patel Institute of Technology",
+      logo: require("./assets/images/adpatel.png"),
+      subHeader: "B.Tech – Artificial Intelligence & Data Science",
+      duration: "2025 – 2029",
+      desc: "Undergraduate program with strong emphasis on data analysis, machine learning fundamentals, and real-world datasets.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Completed multiple applied data science projects",
+        "Strong foundation in Python, statistics, and ML basics"
       ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
-
+/* ========= PROFICIENCY ========= */
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
-  experience: [
-    {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Backend",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "60%"
-    }
-  ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  viewSkillBars: false,
+  experience: [],
+  displayCodersrank: false
 };
 
-// Work experience section
-
+/* ========= WORK EXPERIENCE ========= */
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true,
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "AI & Data Science Intern",
+      company: "My Job Grow",
+      companylogo: require("./assets/images/myjobgrow.png"),
+      date: "Nov 2025 – Feb 2026",
+      desc: "Applied AI and Data Science methodologies to structured datasets with 10,000+ rows across multiple real-world domains.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Performed EDA and statistical profiling on datasets with 10k+ records, identifying 15+ feature correlations",
+        "Built and tuned classification models achieving 78% accuracy on imbalanced datasets",
+        "Developed reusable data preprocessing pipelines reducing manual cleaning time by 60%",
+        "Applied feature engineering techniques (binning, encoding, scaling) improving model F1-scores"
       ]
-    },
-    {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
+/* ========= OPEN SOURCE (REQUIRED PLACEHOLDER – DO NOT REMOVE) ========= */
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: false,
+  display: false
 };
 
-// Some big projects you have worked on
-
+/* ========= PROJECTS ========= */
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "Applied AI, Data Science & Robotics Projects — with visual proof of work",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
+      projectName: "TrackBot 1 — Autonomous Warehouse AGV",
+      featured: true,
+      images: [
+        { src: require("./assets/images/projects/trackbot_robot_iso.png"), alt: "TrackBot AGV - Isometric view showing robotic arm, mecanum wheels, LiDAR sensor, and chassis" },
+        { src: require("./assets/images/projects/trackbot_exploded.png"), alt: "TrackBot Exploded View - Layer-by-layer architecture from sensors to mobility" },
+        { src: require("./assets/images/projects/trackbot_topview_blueprint.png"), alt: "TrackBot Top View - Blueprint showing path planning, sensors, and movement directions" },
+        { src: require("./assets/images/projects/trackbot_architecture.png"), alt: "TrackBot System Architecture - 3-layer diagram: Hardware, Control, and AI & Data" },
+        { src: require("./assets/images/projects/trackbot_mission_control.png"), alt: "TrackBot Mission Control - Dark tech dashboard with facility map and system monitor" },
+        { src: require("./assets/images/projects/trackbot_dashboard.png"), alt: "TrackBot Control Center - Real-time telemetry, battery status, and task queue" }
+      ],
+      highlightLine: "Built an autonomous warehouse robot with real-time navigation, AI-based optimization, and a live monitoring dashboard simulating industrial AGV systems.",
+      problem: "Warehouse logistics rely on manual tracking and rigid automation. Traditional systems lack adaptive navigation and real-time decision-making, resulting in inefficiencies and downtime.",
+      approach: "Designed a multi-layer autonomous system integrating A* pathfinding, odometry, RFID correction, and omnidirectional movement using mecanum wheels. Implemented obstacle detection with dynamic path replanning, payload handling via servo gripper with sensor feedback, and a live WebSocket-powered dashboard for real-time telemetry and control.",
+      techStack: ["ESP32-S3", "C/C++", "Python", "Pandas", "Scikit-learn", "WebSocket", "HTML/CSS/JS", "PID Control", "A* Algorithm"],
+      keyFeatures: [
+        "Autonomous navigation using A*, odometry, and RFID correction",
+        "Omnidirectional movement using mecanum wheels",
+        "Real-time obstacle detection and dynamic path replanning",
+        "Payload handling using servo gripper and sensors",
+        "Live dashboard with telemetry using WebSocket",
+        "AI-based optimization (task prediction, battery analysis)"
+      ],
+      results: "Demonstrates real-world warehouse automation and Industry 4.0 logistics workflows. Integrates robotics, AI, and data systems into a cohesive autonomous platform.",
+      footerLink: [{ name: "GitHub", url: "" }]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
+      projectName: "Campus Library Resource Allocation DSS",
+      images: [
+        { src: require("./assets/images/projects/library_dss_chart.png"), alt: "Library Occupancy Analysis - Hourly patterns with color-coded recommendations" }
+      ],
+      problem: "University libraries face challenges in optimizing seating, staffing, and operating hours due to fluctuating student occupancy throughout the day.",
+      approach: "Designed a decision support system using hourly occupancy data. Implemented conservative threshold logic and time-of-day analysis to recommend operational actions like extending hours, increasing seating, or monitoring usage patterns.",
+      techStack: ["Python", "Pandas", "NumPy", "Decision Logic", "Data Analysis"],
+      results: "Generated actionable recommendations for 3 distinct time periods. System identified peak hours requiring 40%+ more seating and off-peak hours suitable for reduced operations.",
+      footerLink: [{ name: "GitHub", url: "https://github.com/vishvrajsolanki-dev/Campus-Resource-DSS" }]
+    },
+    {
+      projectName: "Electricity Consumption Pattern Mining",
+      images: [
+        { src: require("./assets/images/projects/electricity_clustering.png"), alt: "K-Means Clustering - 3 distinct household consumption pattern clusters" }
+      ],
+      problem: "Utility providers and households lack visibility into distinct consumption behaviors, making it difficult to design targeted energy-saving programs.",
+      approach: "Applied time-series aggregation and K-Means clustering on household electricity data. Performed feature engineering to extract temporal patterns and interpreted cluster characteristics.",
+      techStack: ["Python", "Pandas", "Scikit-learn", "K-Means", "Matplotlib"],
+      results: "Identified 3 distinct consumption profiles: high-usage evenings, steady daytime, and low-consumption patterns. Clusters enabled targeted energy-saving recommendations.",
+      footerLink: [{ name: "GitHub", url: "https://github.com/vishvrajsolanki-dev/electricityconsumption-pattern-mining" }]
+    },
+    {
+      projectName: "Attendance vs Learning Quality Analysis",
+      images: [
+        { src: require("./assets/images/projects/attendance_analysis.png"), alt: "Attendance-Learning Quality Correlation - Scatter plot with classification threshold" }
+      ],
+      problem: "Educational institutions assume higher attendance equals better learning, but lack data-driven validation of this correlation.",
+      approach: "Analyzed academic attendance records alongside performance metrics. Designed a custom learning quality score, performed EDA, and applied classification models to validate the attendance-performance relationship.",
+      techStack: ["Python", "Pandas", "Scikit-learn", "Classification", "Seaborn"],
+      results: "Found that attendance alone explains ~62% of learning quality variance. Identified a threshold attendance rate below which performance drops significantly.",
+      footerLink: [{ name: "GitHub", url: "https://github.com/vishvrajsolanki-dev/attendance-learning-quality-analysis" }]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
-// Achievement Section
-// Include certificates, talks etc
-
+/* ========= CERTIFICATIONS ========= */
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-
+  title: "Certifications & Training",
+  subtitle: "Verified academic and internship credentials",
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
-      footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
-      ]
+      title: "AI & Data Science Training",
+      subtitle: "My Job Grow (2025)",
+      image: require("./assets/images/myjobgrow.png"),
+      imageAlt: "My Job Grow Logo",
+      descBullets: [
+        "Learned fundamentals of data analysis and ML workflows",
+        "Gained hands-on experience with real datasets"
+      ],
+      footerLink: []
     },
     {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Blogs Section
-
-const blogSection = {
-  title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+      title: "AI Internship Program",
+      subtitle: "IIT Hyderabad (2025)",
+      image: require("./assets/images/iith.png"),
+      imageAlt: "IIT Hyderabad Logo",
+      descBullets: [
+        "Exposure to applied AI concepts and real-world problem solving",
+        "Worked on structured learning modules and projects"
+      ],
+      footerLink: []
     },
     {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Talks Sections
-
-const talkSection = {
-  title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
+      title: "Introduction to Generative AI",
+      subtitle: "Google Cloud (2025)",
+      image: require("./assets/images/googlecloud.png"),
+      imageAlt: "Google Cloud Logo",
+      descBullets: [
+        "Learned basics of LLMs and generative AI systems",
+        "Explored real-world AI applications and use cases"
+      ],
+      footerLink: []
+    },
     {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
+      title: "CVM University Hackathon 2026",
+      subtitle: "A. D. Patel Institute of Technology (March 2026)",
+      image: require("./assets/images/adpatel.png"),
+      imageAlt: "ADIT Logo",
+      descBullets: [
+        "Participated in university-level hackathon under SSIP & IIC",
+        "Collaborated in a team to solve real-world problem statements"
+      ],
+      footerLink: []
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
-// Podcast Section
+/* ========= DISABLED SECTIONS ========= */
+const blogSection = { display: false };
+const talkSection = { display: false };
+const podcastSection = { display: false };
+const twitterDetails = { display: false };
 
-const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Resume Section
+/* ========= RESUME ========= */
 const resumeSection = {
-  title: "Resume",
-  subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  display: true,
+  resumeLink: require("./assets/files/Vishvrajsinh_Solanki_Resume.pdf")
 };
 
+/* ========= CONTACT ========= */
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  title: "Let's Work Together",
+  subtitle: "Actively seeking internships in AI & Data Science. Available for immediate opportunities — let's connect!",
+  availabilityBadge: "Available for Internships",
+  number: "+91 93287 67814",
+  email_address: "vishvrajsolanki0207@gmail.com"
 };
 
-// Twitter Section
+const isHireable = true;
 
-const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
-};
-
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
-
+/* ========= EXPORTS ========= */
 export {
   illustration,
   greeting,

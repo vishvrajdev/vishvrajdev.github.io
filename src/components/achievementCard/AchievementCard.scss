@@ -3,25 +3,26 @@
 .card-image {
   max-width: 100%;
   height: auto;
-  width: 250px;
+  width: 120px;
 }
 .card-title {
   color: $titleColor;
-  font-size: 1.375rem;
+  font-size: 1.2rem;
   line-height: 24px;
   font-weight: 700;
-  margin: 15px 0 0 0;
+  margin: 12px 0 0 0;
 }
 .card-subtitle {
   color: $cardSubtitle;
-  font-size: 1.063rem;
+  font-size: 0.95rem;
   line-height: 1.5rem;
+  margin-bottom: 4px;
 }
 .certificate-card {
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: $cardBorderRadius;
   border: 1px solid $lightBorder1;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -32,13 +33,14 @@
 }
 .certificate-card:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-4px);
 }
 .dark-mode.certificate-card:hover {
   box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
 }
 .certificate-image-div {
   position: relative;
-  height: 250px;
+  height: 140px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -46,8 +48,8 @@
 }
 .achievement-cards-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 .certificate-card-footer {
   display: flex;
@@ -74,4 +76,37 @@
 }
 span.certificate-tag:hover {
   background: $buttonHover;
+}
+
+/* Certification Learning Bullets */
+.cert-learnings {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  text-align: left;
+}
+
+.cert-learnings li {
+  font-size: 13px;
+  color: $cardSubtitle;
+  line-height: 1.6;
+  padding: 3px 0;
+  position: relative;
+  padding-left: 18px;
+}
+
+.cert-learnings li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: $buttonColor;
+  font-size: 14px;
+}
+
+.dark-mode .cert-learnings li {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.dark-mode .cert-learnings li::before {
+  color: #a855f7;
 }

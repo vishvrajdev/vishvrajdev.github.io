@@ -27,6 +27,14 @@ export default function AchievementCard({cardInfo, isDark}) {
         <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
           {cardInfo.description}
         </p>
+        {/* Learning Bullets */}
+        {cardInfo.descBullets && cardInfo.descBullets.length > 0 && (
+          <ul className={isDark ? "dark-mode cert-learnings" : "cert-learnings"}>
+            {cardInfo.descBullets.map((bullet, i) => (
+              <li key={i}>{bullet}</li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className="certificate-card-footer">
         {cardInfo.footer.map((v, i) => {

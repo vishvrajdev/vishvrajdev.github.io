@@ -15,6 +15,15 @@ export default function Contact() {
         <div className="contact-div-main">
           <div className="contact-header">
             <h1 className="heading contact-title">{contactInfo.title}</h1>
+
+            {/* Availability Badge */}
+            {contactInfo.availabilityBadge && (
+              <div className={isDark ? "dark-mode availability-badge" : "availability-badge"}>
+                <span className="availability-dot"></span>
+                {contactInfo.availabilityBadge}
+              </div>
+            )}
+
             <p
               className={
                 isDark
@@ -30,24 +39,19 @@ export default function Contact() {
               }
             >
               {contactInfo.number && (
-                <>
-                  <a
-                    className="contact-detail"
-                    href={"tel:" + contactInfo.number}
-                  >
-                    {contactInfo.number}
-                  </a>
-                  <br />
-                  <br />
-                </>
+                <a
+                  className={isDark ? "dark-mode contact-detail-btn" : "contact-detail-btn"}
+                  href={"tel:" + contactInfo.number}
+                >
+                  <i className="fas fa-phone-alt"></i> {contactInfo.number}
+                </a>
               )}
               <a
-                className="contact-detail-email"
+                className={isDark ? "dark-mode contact-detail-btn contact-email-btn" : "contact-detail-btn contact-email-btn"}
                 href={"mailto:" + contactInfo.email_address}
               >
-                {contactInfo.email_address}
+                <i className="fas fa-envelope"></i> {contactInfo.email_address}
               </a>
-              <br />
               <br />
               <SocialMedia />
             </div>

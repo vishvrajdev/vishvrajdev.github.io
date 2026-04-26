@@ -28,12 +28,93 @@
   color: $subTitle;
 }
 
+/* Categorized Skill Cards */
+.skill-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.skill-category-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(211, 211, 211, 0.4);
+  border-radius: $cardBorderRadius;
+  padding: 20px 16px;
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  backdrop-filter: blur(4px);
+}
+
+.skill-category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(85, 25, 139, 0.15);
+  border-color: rgba(85, 25, 139, 0.3);
+}
+
+.dark-mode.skill-category-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode.skill-category-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.2);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.skill-category-icon {
+  font-size: 28px;
+  color: $buttonColor;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Micro-animation: bounce + color pulse on hover */
+.skill-category-card:hover .skill-category-icon {
+  animation: icon-bounce 0.5s ease;
+  color: #7c3aed;
+}
+
+.dark-mode .skill-category-icon {
+  color: #a855f7;
+}
+
+.dark-mode .skill-category-card:hover .skill-category-icon {
+  color: #c084fc;
+}
+
+.skill-category-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: $titleColor;
+}
+
+.dark-mode .skill-category-title {
+  color: $textColorDark;
+}
+
+.skill-category-description {
+  font-size: 13px;
+  color: $cardSubtitle;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.dark-mode .skill-category-description {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .skills-heading {
     font-size: 40px;
   }
 }
+
 @media (max-width: 768px) {
   .skills-heading {
     font-size: 30px;
@@ -58,7 +139,16 @@
     text-align: center;
   }
   .skills-image-div {
-    /* display: none; */
     order: 2;
+  }
+  .skill-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-category-grid {
+    grid-template-columns: 1fr;
   }
 }

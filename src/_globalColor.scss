@@ -5,6 +5,7 @@ For greater control over colors visit each components .scss file. */
 // button colors
 $buttonColor: #55198b;
 $buttonHover: #8c43ce;
+$buttonColorLight: rgba(85, 25, 139, 0.15);
 $topButtonHover: #000;
 
 // text colors light theme
@@ -77,6 +78,13 @@ $appHeaderBG: #282c34;
 $skillsColor: #645beb;
 $appLink: #09d3ac;
 
+// design tokens
+$sectionSpacing: 5rem;
+$cardBorderRadius: 12px;
+$animationSpeed: 0.3s;
+$animationEasing: cubic-bezier(0.4, 0, 0.2, 1);
+$accentGradient: linear-gradient(135deg, #55198b, #7c3aed, #a855f7);
+
 // social media icons
 $faceBook: #3b5998;
 $linkedin: #0e76a8;
@@ -88,3 +96,4 @@ $medium: #000;
 $stackoverflow: #f48024;
 $instagram: #c13584;
 $kaggle: #20beff;
+$whatsapp: #25d366;

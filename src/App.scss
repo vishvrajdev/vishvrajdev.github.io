@@ -20,6 +20,10 @@
   font-size: calc(0.625rem + 2vmin);
   color: $textColorDark;
 }
+/* === Mobile overflow fix === */
+html, body {
+  overflow-x: hidden;
+}
 
 .App-link {
   color: $appLink;
@@ -27,4 +31,33 @@
 
 .subTitle {
   color: $subTitle;
+}
+
+/* ===== Section Spacing ===== */
+.main,
+.education-section,
+.experience-container,
+#contact {
+  scroll-margin-top: 80px;
+}
+
+/* ===== Section Dividers ===== */
+#skills,
+#education,
+#experience,
+#projects,
+#achievements,
+#contact {
+  padding-top: 4rem;
+  border-top: 1px solid rgba(85, 25, 139, 0.1);
+  margin-top: 2rem;
+}
+
+.dark-mode #skills,
+.dark-mode #education,
+.dark-mode #experience,
+.dark-mode #projects,
+.dark-mode #achievements,
+.dark-mode #contact {
+  border-top-color: rgba(255, 255, 255, 0.05);
 }
