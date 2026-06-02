@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.74fa2f54.css",
-    "main.js": "/static/js/main.8be1e979.js",
-    "static/media/trackbot_robot_iso.png": "/static/media/trackbot_robot_iso.3ffa1ee7a998dc91cd9b.png",
-    "static/media/trackbot_topview_blueprint.png": "/static/media/trackbot_topview_blueprint.8a2f80708e61cbcafa58.png",
-    "static/media/trackbot_exploded.png": "/static/media/trackbot_exploded.57121447409538ebba02.png",
-    "static/media/trackbot_mission_control.png": "/static/media/trackbot_mission_control.b5199c9bfbd3bf920aeb.png",
-    "static/media/trackbot_dashboard.png": "/static/media/trackbot_dashboard.42649283d15670e72aba.png",
-    "static/media/attendance_analysis.png": "/static/media/attendance_analysis.81f3a00d2e8da196b778.png",
-    "static/media/trackbot_architecture.png": "/static/media/trackbot_architecture.55e20c9623afc359d7e2.png",
-    "static/media/electricity_clustering.png": "/static/media/electricity_clustering.3f18bc659e3d5c40228c.png",
-    "static/media/library_dss_chart.png": "/static/media/library_dss_chart.d3595819ab46b8694cf7.png",
+    "main.css": "/static/css/main.ccedaff2.css",
+    "main.js": "/static/js/main.38aa3ac6.js",
+    "static/media/trackbot_robot_iso.png": "/static/media/trackbot_robot_iso.2eff1fb9e4401a060568.png",
+    "static/media/trackbot_exploded.png": "/static/media/trackbot_exploded.c83add9ed18a5f858fcf.png",
+    "static/media/trackbot_topview_blueprint.png": "/static/media/trackbot_topview_blueprint.a56399e30074792d8e1f.png",
+    "static/media/trackbot_mission_control.png": "/static/media/trackbot_mission_control.93857186e3ffa62ff1fc.png",
+    "static/media/trackbot_dashboard.png": "/static/media/trackbot_dashboard.07599e23ff474272c75f.png",
+    "static/media/trackbot_architecture.png": "/static/media/trackbot_architecture.53f3f643a7202627e0a9.png",
+    "static/media/lexis_upload.png": "/static/media/lexis_upload.963b234889595456f9d6.png",
+    "static/media/rupeeiq_home.png": "/static/media/rupeeiq_home.e9579b7e7156d20c1262.png",
+    "static/media/lexis_study.png": "/static/media/lexis_study.638ff832f2e892e9edf7.png",
+    "static/media/lexis_quiz.png": "/static/media/lexis_quiz.5b7202b3529b77e701a5.png",
+    "static/media/lexis_dashboard.png": "/static/media/lexis_dashboard.1063e6580d995ce54a6c.png",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Vishvrajsinh_Solanki_Resume.pdf": "/static/media/Vishvrajsinh_Solanki_Resume.1174aa331c88946fc5d3.pdf",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
-    "static/media/manOnTable.svg": "/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
     "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "index.html": "/index.html",
-    "main.74fa2f54.css.map": "/static/css/main.74fa2f54.css.map",
-    "main.8be1e979.js.map": "/static/js/main.8be1e979.js.map"
+    "main.ccedaff2.css.map": "/static/css/main.ccedaff2.css.map",
+    "main.38aa3ac6.js.map": "/static/js/main.38aa3ac6.js.map"
   },
   "entrypoints": [
-    "static/css/main.74fa2f54.css",
-    "static/js/main.8be1e979.js"
+    "static/css/main.ccedaff2.css",
+    "static/js/main.38aa3ac6.js"
   ]
 }
